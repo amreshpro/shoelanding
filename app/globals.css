@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+
+.DarkColor{
+  @apply bg-gray-800 text-white
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.LightColor{
+  @apply bg-gray-100 text-gray-800
+}
+
+.DarkMobileMenu{
+  @apply bg-gray-900 text-white
+}
+.LightMobileMenu{
+  @apply bg-gray-100 text-gray-900
+}
+
+.DarkButton{
+  @apply bg-gray-900 text-white  rounded-lg w-fit
+}
+
+.DarkHoverButton{
+  @apply hover:bg-gray-800 hover:text-white
+}
+.LightHoverButton{
+  @apply hover:bg-gray-100 hover:text-gray-800
 }
