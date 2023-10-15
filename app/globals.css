@@ -35,3 +35,64 @@
 .LightHoverButton{
   @apply hover:bg-gray-100 hover:text-gray-800
 }
+
+
+
+.Animated-Image{
+
+  background: url("/shoe5.avif");
+  background-repeat: no-repeat !important;
+object-fit: scale-down !important;
+  object-position: center;
+animation-name: OsmAnime;
+animation-duration: 8s;
+animation-iteration-count: infinite;
+
+
+}
+
+
+@keyframes OsmAnime {
+  
+from{
+  background: url("/shoe5.avif");
+}
+25%{
+  background: url("/shoe3.avif");
+}
+50%{
+  background: url("/shoe4.avif");
+}
+
+75%{
+  background: url("/shoe1.avif");
+}
+
+to{
+  background:url("/shoe5.avif");
+}
+
+  
+}
+
+
+
+
+.makeBouncing{
+
+  animation:	 bouncing 2s infinite;;
+}
+
+
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(3%) ;
+    transform: translateX(3%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0) ;
+    transform: rotate(10deg);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
