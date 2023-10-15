@@ -2,11 +2,11 @@
 
 
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { TypedUseSelectorHook, useSelector } from "react-redux";
 
 
 const Hero = () => {
-  const isDarkModeEnable = useSelector((state) => state.darkMode);
+  const isDarkModeEnable = useSelector((state:any) => state.darkMode);
 
   return (
     <div

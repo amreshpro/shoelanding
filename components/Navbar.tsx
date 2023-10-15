@@ -22,7 +22,7 @@ const pathName = usePathname();
   
 
   // dark mode value
-  const isDarkModeEnable = useSelector<boolean>((state) => state.darkMode);
+  const isDarkModeEnable = useSelector<boolean>((state:any) => state.darkMode);
 
   const disapatch = useDispatch();
 
